@@ -22,6 +22,7 @@ int     check_duplicate(int *a, int len);
 int     is_sorted(int *arr, int n);
 int     is_empty(int *b, int len);
 void    clean_arr(int *arr, int n);
+void    initial_split(int *a, int *b, int *c, int len);
 void    sort(int *a, int *b, int *c, int len);
 void    solve_only_3(int *a, int len);
 void    solve3(int *a, int*b, int len);

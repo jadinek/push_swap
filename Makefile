@@ -17,16 +17,16 @@ SRC_NAME_1 = checker_main.c\
 		swap_operations.c\
 		checker_stack_functions.c\
 
-SRC_NAME_2 = push_swap_main.c\
+SRC_NAME_2 = ps_main.c\
 		big_sort.c\
-		push_swap_create_stacks.c\
+		ps_create_stacks.c\
 		ps_push_operations.c\
 		ps_reverse_rotate_operations.c\
 		ps_rotate_operations.c\
 		ps_swap_operations.c\
 		small_solves.c\
 		solve5.c\
-		big_sort_functions_one.c\
+		big_sort_functions.c\
 		ps_array_functions.c\
 		ps_stack_functions.c\
 

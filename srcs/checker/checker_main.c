@@ -3,28 +3,27 @@
 int     main(int argc, char *argv[])
 {
     char *l;
+    int *a;
+    int len;
+    int *b;
+    int loop;
 
-    if (argc == 1)
-    {
+    if (argc == 1) {
         get_next_line(0, &l);
         return 0;
     }
-    int *a = create_stack_a(argv[1]);
-    if (!a)
-    {
+    a = create_stack_a(argv[1]);
+    if (!a) {
         ft_putstr("Error");
         return 0;
     }
-    int len = get_len(argv[1]);
-    int *b = create_stack_b(len);
-
-    if (check_duplicate(a, len))
-    {
+    len = get_len(argv[1]);
+    b = create_stack_b(len);
+    if (check_duplicate(a, len)) {
         ft_putstr("Error\n");
         return 0;
     }
-    while (get_next_line(0, &l) > 0)
-    {
+    while (get_next_line(0, &l) > 0) {
         if (!ft_strcmp(l, "sa"))
             sa(a, len);
         else if (!ft_strcmp(l, "sb"))
@@ -47,17 +46,16 @@ int     main(int argc, char *argv[])
             rrb(b, len);
         else if (!ft_strcmp(l, "rrr"))
             rrr(a, b, len);
-        else if (!ft_strcmp(l, "-v"))
-        {
-            int loop = 0;
+        else if (!ft_strcmp(l, "-v")) {
+            loop = 0;
             while(loop < len){
                 ft_putnbr(a[loop]);
                 ft_putchar(' ');
                 loop++;
             }
+            ft_putchar('\n');
         }
-        else
-        {
+        else {
             ft_putstr("Error");
             return 0;
         }
