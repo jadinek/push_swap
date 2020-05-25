@@ -145,5 +145,5 @@ void    sort(int *a, int *b, int *c, int len)
             sa(a, len);
     }
 
-    printf("-v");
+    // printf("-v");
 }

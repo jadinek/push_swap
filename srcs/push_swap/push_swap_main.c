@@ -29,18 +29,14 @@ int     main(int argc, char *argv[])
             ra(a, len);
             return 0;
         }
-        else if (len < 4)
-        {
+        else if (len == 3)
             solve_only_3(a, len);
-        }
-        else if (len < 6)
-        {
-            solve5(a, b, len);
-        }
+        else if (len == 4)
+            solve4(a, b, len);
+        else if (len == 5)
+            solve5(a, b, c, len);
         else
-        {
             sort(a, b, c, len);
-        }
     }
     // ft_putstr("-v\n");
     free(a);

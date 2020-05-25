@@ -31,11 +31,11 @@ int     largest(int *a, int len)
 }
 int     get_median(int *a, int n)
 {
-    int i;
-    int j;
-    // int tmp;
-    i = 0;
-    j = 0;
+    // int i;
+    // int j;
+    // // int tmp;
+    // i = 0;
+    // j = 0;
     // while (i < n){
     //     while (j < n){
     //         if (a[j] > a[i])

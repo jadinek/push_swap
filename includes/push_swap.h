@@ -25,12 +25,15 @@ void    clean_arr(int *arr, int n);
 void    sort(int *a, int *b, int *c, int len);
 void    solve_only_3(int *a, int len);
 void    solve3(int *a, int*b, int len);
-void    solve5(int *a, int *b, int len);
+void    solve5(int *a, int *b, int *c, int len);
 void    after_split(int *a, int *b, int *c, int len);
 void    remove_placeholder(int *arr, int n);
 void    add_placeholder(int *arr, int n);
 int     get_median(int *a, int n);
 int     smallest(int *a, int len);
 int     largest(int *a, int len);
+int     *set_stack_a(int *stack_a, char **arr);
+void    solve4(int *a, int *b, int len);
+void    reverse_swap_rotate(int *a, int len);
 
 #endif

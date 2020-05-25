@@ -15,16 +15,20 @@ SRC_NAME_1 = checker_main.c\
 		reverse_rotate_operations.c\
 		rotate_operations.c\
 		swap_operations.c\
-		stack_helper_functions.c\
+		checker_stack_functions.c\
 
 SRC_NAME_2 = push_swap_main.c\
 		big_sort.c\
 		push_swap_create_stacks.c\
-		push_swap_operations.c\
+		ps_push_operations.c\
+		ps_reverse_rotate_operations.c\
+		ps_rotate_operations.c\
+		ps_swap_operations.c\
 		small_solves.c\
-		sort_helper_functions_one.c\
-		sort_helper_functions_two.c\
-		stack_helper_functions.c\
+		solve5.c\
+		big_sort_functions_one.c\
+		ps_array_functions.c\
+		ps_stack_functions.c\
 
 OBJ_NAME_1 = $(SRC_NAME_1:.c=.o)
 OBJ_NAME_2 = $(SRC_NAME_2:.c=.o)

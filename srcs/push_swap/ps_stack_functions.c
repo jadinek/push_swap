@@ -2,10 +2,13 @@
 
 int     get_len(char *argv1)
 {
+    char **arr;
+    int i;
+    int len;
 
-    char **arr = (ft_strsplit(argv1, ' '));
-    int i = 0;
-    int len = 0;
+    arr = (ft_strsplit(argv1, ' '));
+    i = 0;
+    len = 0;
     while (arr[i] != '\0')
     {
         len++;
@@ -18,6 +21,7 @@ void    clean_arr(int *arr, int n)
 {
     int i;
     int count;
+
     i = 0;
     count = 0;
 
@@ -34,6 +38,7 @@ int     check_duplicate(int *a, int len)
 {
     int i;
     int j;
+
     i = 0;
     j = 1;
     while (i < len){
@@ -60,7 +65,9 @@ int     is_sorted(int *arr, int n)
 
 int     is_empty(int *b, int len)
 {
-    int i = 0;
+    int i;
+
+    i = 0;
     while (i < len)
     {
         if (b[i] != -999)

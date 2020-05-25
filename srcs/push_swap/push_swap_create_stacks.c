@@ -2,9 +2,11 @@
 
 char    **validation(char **arr)
 {
-    int i = 0;
-    int j = 0;
+    int i;
+    int j;
 
+    i = 0;
+    j = 0;
     while (arr[i] != '\0')
     {
         while (arr[i][j] != '\0')
@@ -23,47 +25,52 @@ char    **validation(char **arr)
 }
 int     *create_stack_a(char *argv1)
 {
+    int i;
+    int len;
+    int *stack;
 
+    i = 0;
+    len = 0;
     char **arr = (ft_strsplit(argv1, ' '));
-
     if (!validation(arr))
-    {
         return NULL;
-    }
-
-    int i = 0;
-    int len = 0;
     while (arr[i] != '\0')
     {
         len++;
         i++;
     }
-
-    int *stack;
     stack = (int *)malloc((len) * sizeof(int));
+    if (set_stack_a(stack, arr))
+        return stack;
+    else
+        return NULL;
+}
+int     *set_stack_a(int *stack_a, char **arr){
+    int i;
+    int j;
 
     i = 0;
-    int j = 0;
+    j = 0;
     while (arr[i] != '\0')
     {
         if (ft_atol(arr[i]) > 2147483647 || ft_atol(arr[i]) < -2147483648)
             return NULL;
         else
         {
-            stack[j] = (ft_atoi(arr[i]));
+            stack_a[j] = (ft_atoi(arr[i]));
             i++;
             j++;
         }
     }
-
-    return stack;
+    return stack_a;
 }
 int     *create_stack_b(int len)
 {
     int *stack;
-    stack = (int *)malloc((len + 11) * sizeof(int));
+    int i;
 
-    int i = 0;
+    i = 0;
+    stack = (int *)malloc((len + 11) * sizeof(int));
     while (i < len + 11)
     {
         stack[i] = -999;
