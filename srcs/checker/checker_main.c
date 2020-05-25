@@ -18,11 +18,12 @@ int     main(int argc, char *argv[])
         return 0;
     }
     len = get_len(argv[1]);
-    b = create_stack_b(len);
     if (check_duplicate(a, len)) {
         ft_putstr("\033[1;31mError\n");
         return 0;
     }
+    check_for_sentinels(a, len);
+    b = create_stack_b(len);
     while (get_next_line(0, &l) > 0) {
         if (!ft_strcmp(l, "sa"))
             sa(a, len);

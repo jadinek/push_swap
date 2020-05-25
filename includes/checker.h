@@ -24,5 +24,6 @@ int     check_duplicate(int *a, int len);
 int     is_sorted(int *arr, int n);
 int     is_empty(int *b, int len);
 int     *set_stack_a(int *stack_a, char **arr);
+void    check_for_sentinels(int *a, int len);
 
 #endif

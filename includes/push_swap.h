@@ -36,5 +36,6 @@ int     largest(int *a, int len);
 int     *set_stack_a(int *stack_a, char **arr);
 void    solve4(int *a, int *b, int len);
 void    reverse_swap_rotate(int *a, int len);
+void    check_for_sentinels(int *a, int len);
 
 #endif

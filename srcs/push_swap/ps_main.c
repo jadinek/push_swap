@@ -21,6 +21,7 @@ int     main(int argc, char *argv[])
         ft_putstr("\033[1;31mError\n");
         return 0;
     }
+    check_for_sentinels(a, len);
     if (is_sorted(a, len))
         return 0;
     else {

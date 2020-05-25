@@ -81,3 +81,18 @@ int     *create_stack_b(int len)
     }
     return stack;
 }
+void    check_for_sentinels(int *a, int len){
+    int i;
+
+    i = 0;
+    while (i < len){
+        if (a[i] == -999 || a[i] == 999){
+            ft_putstr("\033[01;33mThis program does not accept the integer: ");
+            ft_putstr("\033[1;31m");
+            ft_putnbr(a[i]);
+            ft_putstr("\033[01;33m\nPlease try again.\n");
+            exit(0);
+        }
+        i++;
+    }
+}
