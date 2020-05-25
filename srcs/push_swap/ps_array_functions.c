@@ -31,24 +31,6 @@ int     largest(int *a, int len)
 }
 int     get_median(int *a, int n)
 {
-    // int i;
-    // int j;
-    // // int tmp;
-    // i = 0;
-    // j = 0;
-    // while (i < n){
-    //     while (j < n){
-    //         if (a[j] > a[i])
-    //         {
-    //             tmp = a[i];
-    //             a[i] = a[j];
-    //             a[j] = tmp;
-    //         }
-    //         j++;
-    //     }
-    //     i++;
-    // }
-    // printf("%d \n", a[n / 2]);
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)

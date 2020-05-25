@@ -34,21 +34,13 @@ int     get_len(char *argv1)
     return len;
 }
 
-int     check_duplicate(int *a, int len)
-{
-    int i;
-    int j;
-
-    i = 0;
-    j = 1;
-    while (i < len){
-        while (j < len){
-            if (a[i] == a[j])
+int check_duplicate(int *a, int len){
+    for(int i = 0; i < len; i++) {  
+        for(int j = i + 1; j < len; j++) {  
+            if(a[i] == a[j])  
                 return 1;
-            j++;
-        }
-        i++;
-    }
+        }  
+    } 
     return 0;
 }
 

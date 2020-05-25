@@ -62,6 +62,9 @@ int     *set_stack_a(int *stack_a, char **arr){
             j++;
         }
     }
+    if (i == 0) {
+        return NULL;
+    }
     return stack_a;
 }
 int     *create_stack_b(int len)

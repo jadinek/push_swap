@@ -14,13 +14,13 @@ int     main(int argc, char *argv[])
     }
     a = create_stack_a(argv[1]);
     if (!a) {
-        ft_putstr("Error");
+        ft_putstr("\033[1;31mError\n");
         return 0;
     }
     len = get_len(argv[1]);
     b = create_stack_b(len);
     if (check_duplicate(a, len)) {
-        ft_putstr("Error\n");
+        ft_putstr("\033[1;31mError\n");
         return 0;
     }
     while (get_next_line(0, &l) > 0) {
@@ -49,22 +49,23 @@ int     main(int argc, char *argv[])
         else if (!ft_strcmp(l, "-v")) {
             loop = 0;
             while(loop < len){
+                ft_putstr("\033[0;34m");
                 ft_putnbr(a[loop]);
                 ft_putchar(' ');
                 loop++;
             }
-            ft_putchar('\n');
+            ft_putstr("\033[0m\n");
         }
         else {
-            ft_putstr("Error");
+            ft_putstr("\033[1;31mError");
             return 0;
         }
         free(l);
     }
     if (is_sorted(a, len) && is_empty(b, len))
-        ft_putstr("OK\n");
+        ft_putstr("\033[1;32mOK\n");
     else
-        ft_putstr("KO\n");
+        ft_putstr("\033[1;31mKO\n");
 
     free(a);
     free(b);
