@@ -90,7 +90,6 @@ void    sort(int *a, int *b, int *c, int len)
         else
             sa(a, len);
     }
-    printf("-v");
 }
 
 void    initial_split(int *a, int *b, int *c, int len)
