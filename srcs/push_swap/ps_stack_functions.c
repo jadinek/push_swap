@@ -1,5 +1,13 @@
 #include "../../includes/push_swap.h"
 
+void free_array(char **a, int len) {
+    int i;
+    for (i = 0; i < len; ++i) {
+        free(a[i]);
+    }
+    free(a);
+}
+
 int     get_len(char *argv1)
 {
     char **arr;
@@ -14,6 +22,7 @@ int     get_len(char *argv1)
         len++;
         i++;
     }
+    free_array(arr, len);
     return len;
 }
 

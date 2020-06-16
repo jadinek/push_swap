@@ -4,6 +4,7 @@
 # include "../libft/includes/libft.h"
 
 char    **validation(char** arr);
+void    free_array(char **a, int len);
 int     *create_stack_a(char* argv1);
 int     *create_stack_b(int len);
 void    sa(int *a, int len);

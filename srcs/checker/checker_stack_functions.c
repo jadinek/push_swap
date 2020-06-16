@@ -1,5 +1,13 @@
 #include "../../includes/checker.h"
 
+void free_array(char **a, int len) {
+    int i;
+    for (i = 0; i < len; ++i) {
+        free(a[i]);
+    }
+    free(a);
+}
+
 void    clean_arr(int *arr, int n)
 {
     int count;
@@ -31,6 +39,7 @@ int     get_len(char *argv1)
         len++;
         i++;
     }
+    free_array(arr, len);
     return len;
 }
 

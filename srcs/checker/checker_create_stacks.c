@@ -32,18 +32,25 @@ int     *create_stack_a(char *argv1)
     i = 0;
     len = 0;
     char **arr = (ft_strsplit(argv1, ' '));
-    if (!validation(arr))
-        return NULL;
     while (arr[i] != '\0')
     {
         len++;
         i++;
     }
-    stack = (int *)malloc((len) * sizeof(int));
-    if (set_stack_a(stack, arr))
-        return stack;
-    else
+    if (!validation(arr)){
+        free_array(arr, len);
         return NULL;
+    }
+    stack = (int *)malloc((len) * sizeof(int));
+    if (set_stack_a(stack, arr)){
+        free_array(arr, len);
+        return stack;
+    }
+    else{
+        free_array(arr, len);
+        free(stack);
+        return NULL;
+    }
 }
 int     *set_stack_a(int *stack_a, char **arr){
     int i;
@@ -91,6 +98,7 @@ void    check_for_sentinels(int *a, int len){
             ft_putstr("\033[1;31m");
             ft_putnbr(a[i]);
             ft_putstr("\033[01;33m\nPlease try again.\n");
+            free(a);
             exit(0);
         }
         i++;

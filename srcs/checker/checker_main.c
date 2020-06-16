@@ -1,5 +1,10 @@
 #include "../../includes/checker.h"
 
+void free_stacks(int *a, int *b){
+    free(a);
+    free(b);
+}
+
 int     main(int argc, char *argv[])
 {
     char *l;
@@ -8,7 +13,7 @@ int     main(int argc, char *argv[])
     int *b;
     int loop;
 
-    if (argc == 1) {
+    if (argc == 1){
         get_next_line(0, &l);
         return 0;
     }
@@ -19,6 +24,7 @@ int     main(int argc, char *argv[])
     }
     len = get_len(argv[1]);
     if (check_duplicate(a, len)) {
+        free(a);
         ft_putstr("\033[1;31mError\n");
         return 0;
     }
@@ -58,6 +64,8 @@ int     main(int argc, char *argv[])
             ft_putstr("\033[0m\n");
         }
         else {
+            free(l);
+            free_stacks(a, b);
             ft_putstr("\033[1;31mError");
             return 0;
         }
@@ -68,6 +76,5 @@ int     main(int argc, char *argv[])
     else
         ft_putstr("\033[1;31mKO\n");
 
-    free(a);
-    free(b);
+    free_stacks(a, b);
 };
